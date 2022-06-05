@@ -13,6 +13,6 @@ mkdir -p ${BASE_PATH}/${DELIVERY}
 # 対象ディレクトリまで移動する
 cd ${BASE_PATH}/${TARGET}
 
-# node_modulesやGit関連ファイル、.DS_Storeを除いてzipファイルを作成する
+# node_modulesと.DS_Storeを除いてzipファイルを作成する
 # 今回の場合、deliveryフォルダ内にsample.zipというファイルが作成される
-zip -r ${BASE_PATH}/${DELIVERY}/${TARGET}.zip * -x "*node_modules*" ".git*" ".DS_Store"
+zip -r ${BASE_PATH}/${DELIVERY}/${TARGET}.zip * -x "*node_modules*" ".DS_Store"
